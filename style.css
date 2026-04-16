@@ -121,7 +121,7 @@ nav a:hover::after {
 
 h1 {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(1.8rem, 8vw, 3rem); 
+    font-size: clamp(3px, 8vw, 5rem); 
     line-height: 1.1;
     font-weight: 500;
     margin-bottom: 28px;
@@ -732,72 +732,98 @@ footer p {
     font-size: clamp(0.8rem, 2vw, 0.95rem);
 }
 
+/* --- TUDO DAQUI PARA BAIXO É APENAS PARA CELULAR --- */
 @media (max-width: 768px) {
-    /* 1. HOME: Força ela a ser a única coisa na tela */
-    #home {
-        height: 100vh !important;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        z-index: 1; /* Fica por baixo */
+
+    /* 1. SEPARAÇÃO E CENTRALIZAÇÃO DAS PÁGINAS */
+    #home, #sobre, #lojas, #contato {
+        min-height: 100vh !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important; /* Centraliza verticalmente */
+        align-items: center !important;     /* Centraliza horizontalmente */
+        text-align: center !important;
+        padding: 80px 20px !important;
+        background-color: #000 !important; /* Fundo sólido para separar as seções */
+        box-sizing: border-box;
     }
 
-    /* 2. SOBRE: Cria a barreira para não mostrar a Home junto */
-    #sobre {
-        position: relative;
-        z-index: 5; /* Fica por cima, cobrindo a Home ao rolar */
-        background-color: #000 !important; /* Cor sólida para não ser transparente */
-        margin-top: 0;
-        padding: 100px 20px 60px !important; /* Espaço grande no topo garante a separação */
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+    /* 2. MENU EM CASCATA (MOBILE) */
+    .btn-mobile {
+        display: flex !important;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: white;
     }
 
-    /* Remove qualquer degradê que esteja facilitando a visão da seção de baixo */
-    #home::after {
-        display: none; 
-    }
-}
-
-    /* 2. GRADE DE CARDS 2x2 */
-    .cards-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* 2 colunas iguais */
-        gap: 10px;
+    #nav-menu {
+        display: block !important;
+        position: absolute;
         width: 100%;
-        max-width: 400px; /* Impede que os cards espalhem demais */
-        margin-top: 20px;
+        top: 60px;
+        right: 0;
+        background: rgba(0, 0, 0, 0.98);
+        height: 0;
+        transition: 0.5s;
+        z-index: 1000;
+        visibility: hidden;
+        overflow: hidden;
     }
 
-    /* 3. CARDS COMPACTOS */
+    #nav-menu.active {
+        height: calc(100vh - 60px);
+        visibility: visible;
+    }
+
+    #nav-menu a {
+        padding: 1.5rem;
+        margin: 0 2rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        display: block;
+        color: white;
+        text-decoration: none;
+    }
+
+    /* 3. FONTES PROPORCIONAIS (NÃO EXPLODEM) */
+    h1 { font-size: clamp(1.6rem, 8vw, 2rem) !important; }
+    h2 { font-size: clamp(1.4rem, 6vw, 1.8rem) !important; }
+    p, .description { font-size: 0.9rem !important; line-height: 1.4; }
+
+    /* 4. CARDS EM FORMATO 2x2 COMPACTO */
+    .cards-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* 2 colunas */
+        gap: 12px !important;
+        width: 100% !important;
+        margin-top: 25px !important;
+    }
+
     .card-pilar {
-        padding: 12px 8px !important;
-        min-height: 130px !important; /* Altura fixa para alinhar a grade */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 8px;
-    }
-
-    /* Ajuste fino dos textos nos cards 2x2 */
-    .card-pilar h3 {
-        font-size: 0.85rem !important;
-        margin: 5px 0;
-    }
-
-    .card-pilar p {
-        font-size: 0.7rem !important;
-        line-height: 1.2;
+        padding: 15px 10px !important;
+        min-height: 130px !important; /* Altura fixa para alinhar */
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background: rgba(255, 255, 255, 0.04) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
     }
 
     .card-pilar img, .card-pilar i {
-        width: 20px !important;
+        width: 24px !important;
         height: auto;
+        margin-bottom: 8px !important;
     }
+
+    .card-pilar h3 {
+        font-size: 0.85rem !important;
+        margin-bottom: 4px !important;
+    }
+
+    .card-pilar p {
+        font-size: 0.75rem !important;
+        line-height: 1.2 !important;
+    }
+}
+
