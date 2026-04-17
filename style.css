@@ -425,7 +425,14 @@ footer {
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
-    .header-container { width: 100%; padding: 0 20px; }
+    .header-container {
+    display: flex;
+    justify-content: space-between; /* Joga logo pra um lado e botão pro outro */
+    align-items: center; /* Centraliza os dois verticalmente */
+    width: 100%;
+    padding: 0 20px;
+    height: 100%; /* Garante que o container ocupe a altura do header */
+}
     header { height: 60px; padding: 0; }
     .header-logo { height: 32px; }
 
@@ -469,11 +476,39 @@ footer {
 
     /* Sobre */
     #sobre { padding: 80px 5% 60px; }
-    .cards-grid { grid-template-columns: 1fr; gap: 16px; }
-    .card-pilar { padding: 35px 25px; }
-    .icon-wrapper { margin-bottom: 24px; }
-    .card-pilar h3 { font-size: 1rem; margin-bottom: 12px; }
-    .card-pilar p { font-size: 0.9rem; }
+    .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Aqui a mágica acontece: 2 colunas */
+        gap: 12px; /* Reduzi o espaço entre eles para caber melhor */
+        padding: 0 15px;
+    }
+
+    .card-pilar {
+        padding: 20px 15px; /* Reduzi o preenchimento interno */
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card-pilar h3 {
+        font-size: 0.9rem; /* Diminuir o título para não quebrar linha toda hora */
+        margin-bottom: 8px;
+    }
+
+    .card-pilar p {
+        font-size: 0.75rem; /* Texto menor para caber no card pequeno */
+        line-height: 1.3;
+    }
+
+    .icon-wrapper {
+        width: 40px; /* Reduzi o tamanho do círculo do ícone */
+        height: 40px;
+        margin-bottom: 12px;
+    }
+
+    .icon-wrapper i, .icon-wrapper svg {
+        font-size: 1.2rem; /* Ícone menor */
+    }
 
     /* Lojas */
     #lojas { padding: 70px 5% 80px; }
@@ -490,15 +525,43 @@ footer {
     #contato { padding: 80px 5% 100px; }
     .contato-title { margin-bottom: 25px; }
     .contato-description { margin-bottom: 45px; }
-    .contato-cards { flex-direction: column; gap: 16px; max-width: 100%; }
-    .contato-cards--duo .contato-card { max-width: 100%; }
-    .contato-card { padding: 28px 24px; }
-    .contato-icon { margin-bottom: 18px; }
-    .contato-card h3 { font-size: 1rem; margin-bottom: 12px; }
-    .contato-card > p { font-size: 0.86rem; margin-bottom: 18px; }
-    .contato-features { margin-bottom: 20px; gap: 12px; }
-    .contato-features li { font-size: 0.82rem; }
-    .contato-link { font-size: 0.77rem; }
+    .contato-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas lado a lado */
+        gap: 12px;
+        padding: 0 10px;
+    }
+        .contato-cards--duo .contato-card { max-width: 100%; }
+        .contato-card {
+        padding: 20px 15px; /* Reduzi o preenchimento interno */
+        height: 100%; /* Garante que os dois fiquem da mesma altura */
+        display: flex;
+        flex-direction: column;
+    }
+        .contato-icon { margin-bottom: 18px; }
+        .contato-card h3 {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+        .contato-card > p {
+        font-size: 0.75rem; /* Texto descritivo menor */
+        line-height: 1.3;
+        margin-bottom: 15px;
+    }
+        .contato-features {
+        gap: 8px;
+        margin-bottom: 15px;
+    }
+        .contato-features li {
+        font-size: 0.7rem; /* Diminuir o tamanho da letra dos itens */
+    }
+
+    /* Ajuste nos links/botões dentro do card */
+    .contato-link, .vendas-online-btn {
+        font-size: 0.65rem;
+        padding: 10px 5px;
+        text-align: center;
+    }
 
     /* FAQ */
     .faq-title { font-size: 0.95rem; margin-bottom: 20px; }
@@ -522,6 +585,11 @@ footer {
 }
 
 @media (max-width: 480px) {
+    .card-pilar {
+        max-width: 320px; /* Limita a largura do card */
+        margin: 0 auto;   /* Centraliza o card na tela */
+    }
+}
     #home { padding: 90px 15px 50px; }
     .subtitle { font-size: 0.6rem; letter-spacing: 3px; margin-bottom: 15px; }
     h1 { margin-bottom: 24px; }
@@ -552,7 +620,6 @@ footer {
 
     .whatsapp-float { width: 48px; height: 48px; }
     .whatsapp-float svg { width: 24px; height: 24px; }
-}
 
 #btn-mobile {
     display: none; /* Esconde o botão por padrão */
