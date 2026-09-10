@@ -35,49 +35,49 @@
                 {
                     name: 'Trilho Perfil LED para Iluminação Industrial',
                     marketplace: 'mercadoLivre',
-                    image: 'assets/produtos/trilho.webp',
+                    image: 'trilho.webp',
                     url: 'https://www.mercadolivre.com.br/trilho-perfil-led-iluminacao-industrial-closet-cozinha-sala-estrutura-preto/p/MLB43875716?pdp_filters=item_id%3AMLB6927854852',
                     badge: 'Mais vendido'
                 },
                 {
                     name: 'Kit 5 Lâmpadas Dicróica LED 6,5W Branco Quente',
                     marketplace: 'mercadoLivre',
-                    image: 'assets/produtos/dicroica.webp', // Troque por exemplo para: 'dicroica.webp'
+                    image: 'dicroica.webp', // Troque por exemplo para: 'dicroica.webp'
                     url: 'https://www.mercadolivre.com.br/5x-lampada-dicroica-led-65w-branco-quente-3000k-mr16-gu10-luz-branco-quente/p/MLB52692635?pdp_filters=seller_id%3A206375372#polycard_client=search-desktop&be_origin=backend&overlay_label=not_apply&search_layout=grid&position=1&type=product&tracking_id=d6d283af-71d5-404d-8058-bd677838071a&wid=MLB4709291375&sid=search',
                     badge: 'Frete grátis'
                 },
                 {
                     name: 'Kit 4 Bases de Teto para Lustre Pendente Dourado',
                     marketplace: 'mercadoLivre',
-                    image: 'assets/produtos/4base.webp',
+                    image: '4base.webp',
                     url: 'https://www.mercadolivre.com.br/kit-4-base-teto-canopla-p-lustre-pendente-dourado/p/MLB44577064?pdp_filters=seller_id%3A206375372#polycard_client=search-desktop&be_origin=backend&overlay_label=not_apply&search_layout=grid&position=6&type=product&tracking_id=8e78b79b-9f66-4a8e-88f5-32dffcc1b20f&wid=MLB6722313878&sid=search',
                     badge: ''
                 },
                 {
                     name: 'Kit 3 Pendentes Tubo 30cm Dourado LED com Fio de Cristal',
                     marketplace: 'mercadoLivre',
-                    image: 'assets/produtos/3pendentes.webp',
+                    image: '3pendentes.webp',
                     url: 'https://www.mercadolivre.com.br/3-pendentes-tubo-30cm-dourado-led-fio-cristal/p/MLB50012699?pdp_filters=seller_id%3A206375372#polycard_client=search-desktop&be_origin=backend&overlay_label=not_apply&search_layout=grid&position=7&type=product&tracking_id=7e6d9cc9-0a94-4613-a90b-dc42daf899fe&wid=MLB6147654278&sid=search',
                     badge: ''
                 },
                 {
                     name: 'Kit 3 Pendentes para Balcão Gourmet Ilha LED Âmbar Retrô',
                     marketplace: 'mercadoLivre',
-                    image: 'assets/produtos/pendentebalcao.webp',
+                    image: 'pendentebalcao.webp',
                     url: 'https://www.mercadolivre.com.br/kit-3-pendente-para-balcao-gourmet-ilha--led-ambar-retro/up/MLBU5121152496?pdp_filters=seller_id%3A206375372#polycard_client=search-desktop&be_origin=backend&overlay_label=not_apply&search_layout=grid&position=18&type=product&tracking_id=93faa7ed-78b6-4ccb-8ede-cdf7e8f6d957&wid=MLB5191843089&sid=search',
                     badge: ''
                 },
                 {
                     name: 'Canopla de Teto Redonda 45cm para 4 Pendentes',
                     marketplace: 'mercadoLivre',
-                    image: 'assets/produtos/canoplamarela.webp',
+                    image: 'canoplamarela.webp',
                     url: 'https://www.mercadolivre.com.br/canopla-teto-grande-redonda-45cm-para-4-pendentes-lustre/up/MLBU3855714273?pdp_filters=seller_id%3A206375372#polycard_client=search-desktop&be_origin=backend&overlay_label=not_apply&search_layout=grid&position=40&type=product&tracking_id=7813e052-3043-45f1-b2bd-fe983591c85a&wid=MLB4555406837&sid=search',
                     badge: ''
                 },
                 {
                     name: 'Kit 3 Pendentes Dourado Escovado com Bocal E27',
                     marketplace: 'mercadoLivre',
-                    image: 'assets/produtos/3dourado.webp',
+                    image: '3dourado.webp',
                     url: 'https://www.mercadolivre.com.br/kit-3-pendente-dourado-escovado--canopla--fio--bocal-e27/up/MLBU3406185354?pdp_filters=seller_id%3A206375372#polycard_client=search-desktop&be_origin=backend&overlay_label=not_apply&search_layout=grid&position=14&type=product&tracking_id=e245c24f-229c-42cd-91b5-c0cd27a38fb6&wid=MLB4190780911&sid=search',
                     badge: 'Oferta'
                 }
@@ -89,42 +89,42 @@
                 {
                     name: 'Kit 3 Pendentes Tubo Fokus 30cm Preto com LED 3000K',
                     marketplace: 'shopee',
-                    image: 'assets/produtos/3pendentespreto.webp',
+                    image: '3pendentespreto.webp',
                     url: 'https://shopee.com.br/Kit-3-Pendente-Tubo-Lustre-Fokus-30cm-Preto-Led-incluso-3000k-i.388202211.23507661314?extraParams=%7B%22display_model_id%22%3A213340575285%2C%22model_selection_logic%22%3A3%7D',
                     badge: ''
                 },
                 {
                     name: 'Luminária Retrô Arandela Camarim com Botão',
                     marketplace: 'shopee',
-                    image: 'assets/produtos/arandelaretro.webp',
+                    image: 'arandelaretro.webp',
                     url: 'https://shopee.com.br/Lumin%C3%A1ria-Retr%C3%B4-Arandela-Camarim-cabeceira-Parede-com-Bot%C3%A3o-Liga-Desliga-i.388202211.23424727626?extraParams=%7B%22display_model_id%22%3A220969237474%2C%22model_selection_logic%22%3A3%7D',
                     badge: ''
                 },
                 {
                     name: 'Canopla de Teto Dourado Champanhe Quadrada 20x20cm',
                     marketplace: 'shopee',
-                    image: 'assets/produtos/canoplaquadrada.webp',
+                    image: 'canoplaquadrada.webp',
                     url: 'https://shopee.com.br/Canopla-de-Teto-Dourado-Champanhe-Quadrada-20x20cm-para-2-Pendentes-Lustre-i.388202211.23893498391?extraParams=%7B%22display_model_id%22%3A179717597684%2C%22model_selection_logic%22%3A3%7D',
                     badge: ''
                 },
                 {
                     name: 'Kit 4 Plafons Spot Preto Grande 17x17cm',
                     marketplace: 'shopee',
-                    image: 'assets/produtos/4plafon.webp',
+                    image: '4plafon.webp',
                     url: 'https://shopee.com.br/4x-Plafon-Spot-Preto-Grande-17x17cm-Sobrepor-Teto-Laje-Gesso-i.388202211.58217402599?extraParams=%7B%22display_model_id%22%3A149794776751%2C%22model_selection_logic%22%3A3%7D',
                     badge: ''
                 },
                 {
                     name: 'Spot Balizador para Embutir no Chão, Piso ou Jardim',
                     marketplace: 'shopee',
-                    image: 'assets/produtos/spotchao.webp',
+                    image: 'spotchao.webp',
                     url: 'https://shopee.com.br/Spot-Balizador-Lumin%C3%A1ria-Embutir-Ch%C3%A3o-Piso-Jardim-Quintal-MR16-GU10-i.388202211.22992822751?extraParams=%7B%22display_model_id%22%3A238763651083%2C%22model_selection_logic%22%3A3%7D',
                     badge: ''
                 },
                 {
                     name: 'Kit 5 Canoplas de Teto 12cm Dourado Escovado',
                     marketplace: 'shopee',
-                    image: 'assets/produtos/5canopla.webp',
+                    image: '5canopla.webp',
                     url: 'https://shopee.com.br/Kit-5-Canopla-de-Teto-12cm-para-Pendente-Lustre-Dourado-escovado-i.388202211.22993244875?extraParams=%7B%22display_model_id%22%3A139646478927%2C%22model_selection_logic%22%3A3%7D',
                     badge: ''
                 }
