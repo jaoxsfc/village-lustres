@@ -5,36 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Village Lustres - Iluminação de Alto Padrão | Lustre Online</title>
     <meta name="description" content="Especialistas em lustres, pendentes e iluminação de alto padrão. Compre com segurança no Mercado Livre e Shopee. Loja física em São José do Rio Preto - SP. Entrega rápida e garantida.">
-    
+
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Village Lustres - Iluminação Premium para Residências e Empresas">
     <meta property="og:description" content="Especialistas em lustres decorativos, pendentes e iluminação de alto padrão. Compre com segurança e aproveite as melhores promoções no Mercado Livre e Shopee.">
     <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Village Lustres">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Village Lustres — Iluminação de Alto Padrão">
+    <meta name="twitter:description" content="Lustres, pendentes e iluminação. Compre online ou visite nossa loja em São José do Rio Preto.">
+    <meta name="twitter:image" content="https://villagelustres.com.br/social-preview.png">
+    <meta name="twitter:image:alt" content="Logo Village Lustres">
     <meta property="og:url" content="https://villagelustres.com.br">
-    <meta property="og:image" content="https://villagelustres.com.br/logotipo.png">
+    <meta property="og:image" content="https://villagelustres.com.br/social-preview.png">
     <meta property="og:image:alt" content="Logo Village Lustres">
-    
+
     <!-- Canonical URL -->
     <link rel="canonical" href="https://villagelustres.com.br">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="apple-touch-icon" href="logotipo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 
-    <!-- 1. Pré-conexão aos servidores de fonte (elimina latência DNS/TLS) -->
+    <!-- Antecipação das conexões de fontes. -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- 2. Fontes carregadas direto no HTML — sem @import no CSS (resolve render-blocking) -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Poppins:wght@200;300;400;500&display=swap">
+    <!-- Fontes com troca de fallback durante o carregamento. -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Poppins:wght@300;400;500;600;700&display=swap">
 
-    <!-- 3. Imagem hero com máxima prioridade (melhora LCP) -->
-    <link rel="preload" href="background.webp" as="image" fetchpriority="high">
+    <!-- Fotografia otimizada com prioridade de carregamento. -->
+    <link rel="preload" href="background-optimized.webp" as="image" fetchpriority="high">
 
-    <!-- 4. CSS do site -->
+    <!-- CSS do site. -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- 5. Clarity diferido — carrega só após o page load, sem bloquear renderização -->
+    <!-- Clarity preservado no head, com carregamento assíncrono após load. -->
     <script>
     window.addEventListener('load', function() {
         (function(c,l,a,r,i,t,y){
@@ -61,7 +70,7 @@
         "postalCode": "15015-110",
         "addressCountry": "BR"
       },
-      "telephone": "+55 (17) 9999-9999",
+      "telephone": "+5517982008671",
       "url": "https://villagelustres.com.br",
       "priceRange": "$$",
       "sameAs": [
@@ -86,358 +95,480 @@
     </script>
 </head>
 <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
     <header>
         <div class="header-container">
             <a href="#home" class="logo-link">
-                <img src="logotipo.png" alt="Village Lustres" class="header-logo">
+                <img src="logotipo.png" alt="Village Lustres" width="640" height="263" class="header-logo">
             </a>
-            <nav id="nav-menu">
+            <nav id="nav-menu" aria-label="Navegação principal">
                 <a href="#home">Home</a>
-                <a href="#sobre">Sobre</a>  
                 <a href="#produtos">Produtos</a>
                 <a href="#lojas">Comprar</a>
+                <a href="#sobre">Sobre</a>
                 <a href="#contato">Contato</a>
             </nav>
-            <button class="btn-mobile" id="btn-mobile" aria-label="Menu">
+            <button class="btn-mobile" id="btn-mobile" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu" hidden>
                 <span id="hamburger"></span>
             </button>
         </div>
     </header>
-    <main>
-    <section id="home">
+    <main id="conteudo" tabindex="-1">
+        <section id="home" tabindex="-1">
 
-        <div class="hero-content">
-            <h1>A luz que valoriza <br> <span>cada detalhe.</span></h1>
-            <p class="description">
-                Lustres modernos, pendentes, iluminação decorativa de alto padrão e todos os tipos de lâmpadas. Trabalhamos com peças ideais para sala de estar, sala de jantar, quartos e ambientes sofisticados. Nossos produtos estão disponíveis com envio rápido e compra segura através do Mercado Livre e Shopee.
-            </p>
-            <a href="#lojas" class="btn-catalog">COMPRAR AGORA</a>
-        </div>
-
-        <div class="scroll-indicator">
-            <span class="arrow-down"></span>
-        </div>
-    </section>
-
-    <div class="main-content-dark">   
-        <section id="sobre">
-            <div class="container-sobre">
-                <p class="subtitle">QUEM SOMOS</p>
-                <h2>Sobre a <span>Village</span></h2>
-                <p class="sobre-description">
-                    "Especialistas em iluminação de alto padrão há mais de 10 anos, transformamos residências e empresas em espaços sofisticados e funcionais. Na Village, cada produto é cuidadosamente selecionado para valorizar a arquitetura, criar ambientes únicos e proporcionar o equilíbrio perfeito entre estética premium e funcionalidade. Somos referência em qualidade, design e satisfação do cliente."
+            <div class="hero-content">
+                <h1>A luz que valoriza <br> <span>cada detalhe.</span></h1>
+                <p class="description">
+                    Lustres modernos, pendentes, iluminação decorativa de alto padrão e todos os tipos de lâmpadas. Trabalhamos com peças ideais para sala de estar, sala de jantar, quartos e ambientes sofisticados. Nossos produtos estão disponíveis com envio rápido e compra segura através do Mercado Livre e Shopee.
                 </p>
-                <div class="divider">
-                    <div class="divider-line"></div>
-                    <span class="star-icon">✦</span>
-                    <div class="divider-line"></div>
-                </div>
-                <div class="metrics-bar">
-                <div class="metric-item">
-                    <span class="metric-number">+5 mil</span>
-                    <span class="metric-text">Vendas</span>
-                </div>
-                <div class="metric-divider"></div>
-                <div class="metric-item">
-                    <span class="metric-number">+300 produtos</span>
-                    <span class="metric-text">Nas lojas online</span>
-                </div>
-                <div class="metric-divider"></div>
-                <div class="metric-item">
-                    <span class="metric-number">Líder Gold</span>
-                    <span class="metric-text">Vendedor Destaque</span>
-                </div>
-                <div class="metric-divider"></div>
-                <div class="metric-item">
-                    <span class="metric-number">100%</span>
-                    <span class="metric-text">Entrega Segura</span>
-                </div>
+                <a href="#lojas" class="btn-catalog">COMPRAR AGORA</a>
             </div>
-                <div class="cards-grid">
-                    <div class="card-pilar">
-                        <div class="icon-wrapper">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
-                                <circle cx="12" cy="12" r="4"/>
-                            </svg>
-                        </div>
-                        <h3>Iluminação de Qualidade</h3>
-                        <p>Curadoria rigorosa de marcas que unem eficiência energética e design atemporal.</p>
-                    </div>
-                    <div class="card-pilar">
-                        <div class="icon-wrapper">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M3 3h18v18H3zM3 9h18M3 15h18M9 3v18M15 3v18"/>
-                            </svg>
-                        </div>
-                        <h3>Soluções Completas</h3>
-                        <p>Do lustre central aos detalhes de spots e arandelas para todos os seus projetos.</p>
-                    </div>
-                    <div class="card-pilar">
-                        <div class="icon-wrapper">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                            </svg>
-                        </div>
-                        <h3>Qualidade Garantida</h3>
-                        <p>Procedência garantida em cada peça, com foco na durabilidade e acabamento premium.</p>
-                    </div>
-                    <div class="card-pilar">
-                        <div class="icon-wrapper">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
-                            <line x1="3" y1="6" x2="21" y2="6"></line>
-                            <path d="M16 10a4 4 0 0 1-8 0"></path>
-                        </svg>
-                        </div>
-                        <h3>Compra Simplificada</h3>
-                        <p>Feita através das maiores plataformas do país, garantindo proteção total e facilidade em cada etapa.</p>
-                    </div>
-                </div>
+
+            <div class="scroll-indicator">
+                <span class="arrow-down"></span>
             </div>
         </section>
 
-        <section id="produtos">
-            <p class="subtitle">Vitrine Village</p>
-            <h2>Encontre a peça ideal para <span>iluminar seu ambiente.</span></h2>
-            <p class="lojas-description">Confira os produtos mais procurados e compre diretamente pela plataforma indicada.</p>
+        <div class="main-content-dark">
+            <section id="produtos" tabindex="-1">
+                <p class="subtitle">Vitrine Village</p>
+                <h2>Encontre a peça ideal para <span>iluminar seu ambiente.</span></h2>
+                <p class="lojas-description">Confira os produtos mais procurados e compre diretamente pela plataforma indicada.</p>
 
-            <div class="products-panel">
-                <div class="product-shelf" data-product-shelf="mais-vendidos">
-                    <div class="product-shelf-heading">
-                        <div>
-                            <p class="shelf-kicker">Seleção Village</p>
-                            <h3>Mais vendidos</h3>
+                <!-- Edite os produtos diretamente nos cards abaixo; eles funcionam sem JavaScript. -->
+                <div class="products-panel">
+                    <div class="product-shelf" data-product-shelf="mais-vendidos" role="group" aria-label="Mais vendidos">
+                        <div class="product-shelf-heading">
+                            <div>
+                                <p class="shelf-kicker">Seleção Village</p>
+                                <h3>Mais vendidos</h3>
+                            </div>
+                            <a class="more-products-link" href="https://www.mercadolivre.com.br/pagina/villageshopping" target="_blank" rel="noopener noreferrer" data-more-products="mais-vendidos">Mais produtos <span aria-hidden="true">→</span></a>
                         </div>
-                        <a class="more-products-link" href="#" target="_blank" rel="noopener noreferrer" data-more-products="mais-vendidos">Mais produtos <span aria-hidden="true">→</span></a>
+                        <div class="products-carousel-wrap">
+                            <button class="carousel-button carousel-button--prev" type="button" aria-label="Produtos anteriores" data-carousel-prev="mais-vendidos" aria-controls="carousel-mais-vendidos" hidden>‹</button>
+                            <div class="products-carousel" id="carousel-mais-vendidos" data-carousel="mais-vendidos" role="region" aria-label="Produtos: mais vendidos" tabindex="0">
+                                <a class="product-card" href="https://www.mercadolivre.com.br/trilho-perfil-led-iluminacao-industrial-closet-cozinha-sala-estrutura-preto/p/MLB43875716?pdp_filters=item_id%3AMLB6927854852" target="_blank" rel="noopener noreferrer">
+                                    <span class="product-card-badge">Mais vendido</span>
+                                    <img class="product-card-image" src="trilho.webp" alt="Trilho Perfil LED para Iluminação Industrial" width="1200" height="966" loading="lazy" decoding="async">
+                                    <div class="product-card-body">
+                                        <span class="product-card-market">Disponível no Mercado Livre</span>
+                                        <p class="product-card-name">Trilho Perfil LED para Iluminação Industrial</p>
+                                        <span class="product-card-link">Ver produto <span aria-hidden="true">→</span></span>
+                                    </div>
+                                </a>
+                                <a class="product-card" href="https://www.mercadolivre.com.br/5x-lampada-dicroica-led-65w-branco-quente-3000k-mr16-gu10-luz-branco-quente/p/MLB52692635?pdp_filters=seller_id%3A206375372#polycard_client=search-desktop&amp;be_origin=backend&amp;overlay_label=not_apply&amp;search_layout=grid&amp;position=1&amp;type=product&amp;tracking_id=d6d283af-71d5-404d-8058-bd677838071a&amp;wid=MLB4709291375&amp;sid=search" target="_blank" rel="noopener noreferrer">
+                                    <span class="product-card-badge">Destaque</span>
+                                    <img class="product-card-image" src="dicroica.webp" alt="Kit 5 Lâmpadas Dicróica LED 6,5W Branco Quente" width="1194" height="838" loading="lazy" decoding="async">
+                                    <div class="product-card-body">
+                                        <span class="product-card-market">Disponível no Mercado Livre</span>
+                                        <p class="product-card-name">Kit 5 Lâmpadas Dicróica LED 6,5W Branco Quente</p>
+                                        <span class="product-card-link">Ver produto <span aria-hidden="true">→</span></span>
+                                    </div>
+                                </a>
+                                <a class="product-card" href="https://www.mercadolivre.com.br/kit-4-base-teto-canopla-p-lustre-pendente-dourado/p/MLB44577064?pdp_filters=seller_id%3A206375372#polycard_client=search-desktop&amp;be_origin=backend&amp;overlay_label=not_apply&amp;search_layout=grid&amp;position=6&amp;type=product&amp;tracking_id=8e78b79b-9f66-4a8e-88f5-32dffcc1b20f&amp;wid=MLB6722313878&amp;sid=search" target="_blank" rel="noopener noreferrer">
+
+                                    <img class="product-card-image" src="4base.webp" alt="Kit 4 Bases de Teto para Lustre Pendente Dourado" width="1200" height="662" loading="lazy" decoding="async">
+                                    <div class="product-card-body">
+                                        <span class="product-card-market">Disponível no Mercado Livre</span>
+                                        <p class="product-card-name">Kit 4 Bases de Teto para Lustre Pendente Dourado</p>
+                                        <span class="product-card-link">Ver produto <span aria-hidden="true">→</span></span>
+                                    </div>
+                                </a>
+                                <a class="product-card" href="https://www.mercadolivre.com.br/3-pendentes-tubo-30cm-dourado-led-fio-cristal/p/MLB50012699?pdp_filters=seller_id%3A206375372#polycard_client=search-desktop&amp;be_origin=backend&amp;overlay_label=not_apply&amp;search_layout=grid&amp;position=7&amp;type=product&amp;tracking_id=7e6d9cc9-0a94-4613-a90b-dc42daf899fe&amp;wid=MLB6147654278&amp;sid=search" target="_blank" rel="noopener noreferrer">
+
+                                    <img class="product-card-image" src="3pendentes.webp" alt="Kit 3 Pendentes Tubo 30cm Dourado LED com Fio de Cristal" width="685" height="771" loading="lazy" decoding="async">
+                                    <div class="product-card-body">
+                                        <span class="product-card-market">Disponível no Mercado Livre</span>
+                                        <p class="product-card-name">Kit 3 Pendentes Tubo 30cm Dourado LED com Fio de Cristal</p>
+                                        <span class="product-card-link">Ver produto <span aria-hidden="true">→</span></span>
+                                    </div>
+                                </a>
+                                <a class="product-card" href="https://www.mercadolivre.com.br/kit-3-pendente-para-balcao-gourmet-ilha--led-ambar-retro/up/MLBU5121152496?pdp_filters=seller_id%3A206375372#polycard_client=search-desktop&amp;be_origin=backend&amp;overlay_label=not_apply&amp;search_layout=grid&amp;position=18&amp;type=product&amp;tracking_id=93faa7ed-78b6-4ccb-8ede-cdf7e8f6d957&amp;wid=MLB5191843089&amp;sid=search" target="_blank" rel="noopener noreferrer">
+
+                                    <img class="product-card-image" src="pendentebalcao.webp" alt="Kit 3 Pendentes para Balcão Gourmet Ilha LED Âmbar Retrô" width="1200" height="678" loading="lazy" decoding="async">
+                                    <div class="product-card-body">
+                                        <span class="product-card-market">Disponível no Mercado Livre</span>
+                                        <p class="product-card-name">Kit 3 Pendentes para Balcão Gourmet Ilha LED Âmbar Retrô</p>
+                                        <span class="product-card-link">Ver produto <span aria-hidden="true">→</span></span>
+                                    </div>
+                                </a>
+                                <a class="product-card" href="https://www.mercadolivre.com.br/canopla-teto-grande-redonda-45cm-para-4-pendentes-lustre/up/MLBU3855714273?pdp_filters=seller_id%3A206375372#polycard_client=search-desktop&amp;be_origin=backend&amp;overlay_label=not_apply&amp;search_layout=grid&amp;position=40&amp;type=product&amp;tracking_id=7813e052-3043-45f1-b2bd-fe983591c85a&amp;wid=MLB4555406837&amp;sid=search" target="_blank" rel="noopener noreferrer">
+
+                                    <img class="product-card-image" src="canoplamarela.webp" alt="Canopla de Teto Redonda 45cm para 4 Pendentes" width="1190" height="705" loading="lazy" decoding="async">
+                                    <div class="product-card-body">
+                                        <span class="product-card-market">Disponível no Mercado Livre</span>
+                                        <p class="product-card-name">Canopla de Teto Redonda 45cm para 4 Pendentes</p>
+                                        <span class="product-card-link">Ver produto <span aria-hidden="true">→</span></span>
+                                    </div>
+                                </a>
+                                <a class="product-card" href="https://www.mercadolivre.com.br/kit-3-pendente-dourado-escovado--canopla--fio--bocal-e27/up/MLBU3406185354?pdp_filters=seller_id%3A206375372#polycard_client=search-desktop&amp;be_origin=backend&amp;overlay_label=not_apply&amp;search_layout=grid&amp;position=14&amp;type=product&amp;tracking_id=e245c24f-229c-42cd-91b5-c0cd27a38fb6&amp;wid=MLB4190780911&amp;sid=search" target="_blank" rel="noopener noreferrer">
+                                    <span class="product-card-badge">Destaque</span>
+                                    <img class="product-card-image" src="3dourado.webp" alt="Kit 3 Pendentes Dourado Escovado com Bocal E27" width="1198" height="1079" loading="lazy" decoding="async">
+                                    <div class="product-card-body">
+                                        <span class="product-card-market">Disponível no Mercado Livre</span>
+                                        <p class="product-card-name">Kit 3 Pendentes Dourado Escovado com Bocal E27</p>
+                                        <span class="product-card-link">Ver produto <span aria-hidden="true">→</span></span>
+                                    </div>
+                                </a>
+                            </div>
+                            <button class="carousel-button carousel-button--next" type="button" aria-label="Próximos produtos" data-carousel-next="mais-vendidos" aria-controls="carousel-mais-vendidos" hidden>›</button>
+                        </div>
                     </div>
-                    <div class="products-carousel-wrap">
-                        <button class="carousel-button carousel-button--prev" type="button" aria-label="Produtos anteriores" data-carousel-prev="mais-vendidos">‹</button>
-                        <div class="products-carousel" data-carousel="mais-vendidos"></div>
-                        <button class="carousel-button carousel-button--next" type="button" aria-label="Próximos produtos" data-carousel-next="mais-vendidos">›</button>
+
+                    <div class="product-shelf" data-product-shelf="destaques" role="group" aria-label="Em destaque">
+                        <div class="product-shelf-heading">
+                            <div>
+                                <p class="shelf-kicker">Para transformar o ambiente</p>
+                                <h3>Em destaque</h3>
+                            </div>
+                            <a class="more-products-link" href="https://shopee.com.br/villagelustres" target="_blank" rel="noopener noreferrer" data-more-products="destaques">Mais produtos <span aria-hidden="true">→</span></a>
+                        </div>
+                        <div class="products-carousel-wrap">
+                            <button class="carousel-button carousel-button--prev" type="button" aria-label="Produtos anteriores" data-carousel-prev="destaques" aria-controls="carousel-destaques" hidden>‹</button>
+                            <div class="products-carousel" id="carousel-destaques" data-carousel="destaques" role="region" aria-label="Produtos: em destaque" tabindex="0">
+                                <a class="product-card" href="https://shopee.com.br/Kit-3-Pendente-Tubo-Lustre-Fokus-30cm-Preto-Led-incluso-3000k-i.388202211.23507661314?extraParams=%7B%22display_model_id%22%3A213340575285%2C%22model_selection_logic%22%3A3%7D" target="_blank" rel="noopener noreferrer">
+
+                                    <img class="product-card-image" src="3pendentespreto.webp" alt="Kit 3 Pendentes Tubo Fokus 30cm Preto com LED 3000K" width="450" height="450" loading="lazy" decoding="async">
+                                    <div class="product-card-body">
+                                        <span class="product-card-market">Disponível no Shopee</span>
+                                        <p class="product-card-name">Kit 3 Pendentes Tubo Fokus 30cm Preto com LED 3000K</p>
+                                        <span class="product-card-link">Ver produto <span aria-hidden="true">→</span></span>
+                                    </div>
+                                </a>
+                                <a class="product-card" href="https://shopee.com.br/Lumin%C3%A1ria-Retr%C3%B4-Arandela-Camarim-cabeceira-Parede-com-Bot%C3%A3o-Liga-Desliga-i.388202211.23424727626?extraParams=%7B%22display_model_id%22%3A220969237474%2C%22model_selection_logic%22%3A3%7D" target="_blank" rel="noopener noreferrer">
+
+                                    <img class="product-card-image" src="arandelaretro.webp" alt="Luminária Retrô Arandela Camarim com Botão" width="450" height="450" loading="lazy" decoding="async">
+                                    <div class="product-card-body">
+                                        <span class="product-card-market">Disponível no Shopee</span>
+                                        <p class="product-card-name">Luminária Retrô Arandela Camarim com Botão</p>
+                                        <span class="product-card-link">Ver produto <span aria-hidden="true">→</span></span>
+                                    </div>
+                                </a>
+                                <a class="product-card" href="https://shopee.com.br/Canopla-de-Teto-Dourado-Champanhe-Quadrada-20x20cm-para-2-Pendentes-Lustre-i.388202211.23893498391?extraParams=%7B%22display_model_id%22%3A179717597684%2C%22model_selection_logic%22%3A3%7D" target="_blank" rel="noopener noreferrer">
+
+                                    <img class="product-card-image" src="canoplaquadrada.webp" alt="Canopla de Teto Dourado Champanhe Quadrada 20x20cm" width="450" height="450" loading="lazy" decoding="async">
+                                    <div class="product-card-body">
+                                        <span class="product-card-market">Disponível no Shopee</span>
+                                        <p class="product-card-name">Canopla de Teto Dourado Champanhe Quadrada 20x20cm</p>
+                                        <span class="product-card-link">Ver produto <span aria-hidden="true">→</span></span>
+                                    </div>
+                                </a>
+                                <a class="product-card" href="https://shopee.com.br/4x-Plafon-Spot-Preto-Grande-17x17cm-Sobrepor-Teto-Laje-Gesso-i.388202211.58217402599?extraParams=%7B%22display_model_id%22%3A149794776751%2C%22model_selection_logic%22%3A3%7D" target="_blank" rel="noopener noreferrer">
+
+                                    <img class="product-card-image" src="4plafon.webp" alt="Kit 4 Plafons Spot Preto Grande 17x17cm" width="1024" height="1024" loading="lazy" decoding="async">
+                                    <div class="product-card-body">
+                                        <span class="product-card-market">Disponível no Shopee</span>
+                                        <p class="product-card-name">Kit 4 Plafons Spot Preto Grande 17x17cm</p>
+                                        <span class="product-card-link">Ver produto <span aria-hidden="true">→</span></span>
+                                    </div>
+                                </a>
+                                <a class="product-card" href="https://shopee.com.br/Spot-Balizador-Lumin%C3%A1ria-Embutir-Ch%C3%A3o-Piso-Jardim-Quintal-MR16-GU10-i.388202211.22992822751?extraParams=%7B%22display_model_id%22%3A238763651083%2C%22model_selection_logic%22%3A3%7D" target="_blank" rel="noopener noreferrer">
+
+                                    <img class="product-card-image" src="spotchao.webp" alt="Spot Balizador para Embutir no Chão, Piso ou Jardim" width="964" height="964" loading="lazy" decoding="async">
+                                    <div class="product-card-body">
+                                        <span class="product-card-market">Disponível no Shopee</span>
+                                        <p class="product-card-name">Spot Balizador para Embutir no Chão, Piso ou Jardim</p>
+                                        <span class="product-card-link">Ver produto <span aria-hidden="true">→</span></span>
+                                    </div>
+                                </a>
+                                <a class="product-card" href="https://shopee.com.br/Kit-5-Canopla-de-Teto-12cm-para-Pendente-Lustre-Dourado-escovado-i.388202211.22993244875?extraParams=%7B%22display_model_id%22%3A139646478927%2C%22model_selection_logic%22%3A3%7D" target="_blank" rel="noopener noreferrer">
+
+                                    <img class="product-card-image" src="5canopla.webp" alt="Kit 5 Canoplas de Teto 12cm Dourado Escovado" width="450" height="450" loading="lazy" decoding="async">
+                                    <div class="product-card-body">
+                                        <span class="product-card-market">Disponível no Shopee</span>
+                                        <p class="product-card-name">Kit 5 Canoplas de Teto 12cm Dourado Escovado</p>
+                                        <span class="product-card-link">Ver produto <span aria-hidden="true">→</span></span>
+                                    </div>
+                                </a>
+                            </div>
+                            <button class="carousel-button carousel-button--next" type="button" aria-label="Próximos produtos" data-carousel-next="destaques" aria-controls="carousel-destaques" hidden>›</button>
+                        </div>
                     </div>
                 </div>
 
-                <div class="product-shelf" data-product-shelf="destaques">
-                    <div class="product-shelf-heading">
-                        <div>
-                            <p class="shelf-kicker">Para transformar o ambiente</p>
-                            <h3>Em destaque</h3>
+            </section>
+
+            <section id="lojas" tabindex="-1">
+                <p class="subtitle">Canais de Venda</p>
+                <h2>Escolha onde comprar com <span>total segurança.</span></h2>
+                <p class="lojas-description">Acesse nossa loja oficial no marketplace que preferir ou visite a Village presencialmente.</p>
+                <div class="stores-wrapper">
+
+                    <!-- Card Mercado Livre -->
+                    <a href="https://www.mercadolivre.com.br/pagina/villageshopping?category_id=MLB189195&item_id=MLB3952702131&recos_listing=true&client=recoview-selleritems&seller_id=206375372#origin=vpp" target="_blank" rel="noopener noreferrer" class="store-box">
+                        <div class="store-box-header">
+                            <div class="store-brand">
+                                <img src="https://http2.mlstatic.com/frontend-assets/ui-navigation/5.18.9/mercadolibre/logo__small.png" alt="Mercado Livre" width="53" height="38">
+                            </div>
+                            <span class="store-badge">Líder Gold</span>
                         </div>
-                        <a class="more-products-link" href="#" target="_blank" rel="noopener noreferrer" data-more-products="destaques">Mais produtos <span aria-hidden="true">→</span></a>
-                    </div>
-                    <div class="products-carousel-wrap">
-                        <button class="carousel-button carousel-button--prev" type="button" aria-label="Produtos anteriores" data-carousel-prev="destaques">‹</button>
-                        <div class="products-carousel" data-carousel="destaques"></div>
-                        <button class="carousel-button carousel-button--next" type="button" aria-label="Próximos produtos" data-carousel-next="destaques">›</button>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-        <section id="lojas">
-            <p class="subtitle">Canais de Venda</p>
-            <h2>Escolha onde comprar com <span>total segurança.</span></h2>
-            <p class="lojas-description">Acesse nossa loja oficial no marketplace que preferir ou visite a Village presencialmente.</p>
-            <div class="stores-wrapper">
-
-                <!-- Card Mercado Livre -->
-                <a href="https://www.mercadolivre.com.br/pagina/villageshopping?category_id=MLB189195&item_id=MLB3952702131&recos_listing=true&client=recoview-selleritems&seller_id=206375372#origin=vpp" target="_blank" rel="noopener noreferrer" class="store-box">
-                    <div class="store-box-header">
-                        <div class="store-brand">
-                            <img src="https://http2.mlstatic.com/frontend-assets/ui-navigation/5.18.9/mercadolibre/logo__small.png" alt="Mercado Livre">
+                        <div class="store-text">
+                            <h3>Mercado Livre</h3>
+                            <p>Consulte no anúncio as opções de parcelamento, os prazos de entrega e as condições de compra protegida do Mercado Livre.</p>
                         </div>
-                        <span class="store-badge">Líder Gold</span>
-                    </div>
-                    <div class="store-text">
-                        <h3>Mercado Livre</h3>
-                        <p>Parcelamento em até 12x sem juros, compra protegida e entrega garantida pelo maior marketplace da América Latina.</p>
-                    </div>
-                    <div class="store-footer">
-                        <span class="store-link">Acessar loja oficial</span>
-                        <span class="store-arrow">→</span>
-                    </div>
-                </a>
-
-                <!-- Card Shopee -->
-                <a href="https://shopee.com.br/villagelustres" target="_blank" rel="noopener noreferrer" class="store-box">
-                    <div class="store-box-header">
-                        <div class="store-brand">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Shopee.svg" alt="Shopee">
+                        <div class="store-footer">
+                            <span class="store-link">Acessar loja oficial</span>
+                            <span class="store-arrow">→</span>
                         </div>
-                        <span class="store-badge">Frete Grátis</span>
-                    </div>
-                    <div class="store-text">
-                        <h3>Shopee</h3>
-                        <p>Cupons exclusivos, frete grátis em todos os pedidos e programa de cashback para compras recorrentes.</p>
-                    </div>
-                    <div class="store-footer">
-                        <span class="store-link">Acessar loja oficial</span>
-                        <span class="store-arrow">→</span>
-                    </div>
-                </a>
+                    </a>
 
-                <!-- Card Loja Física -->
-                <a href="https://maps.app.goo.gl/S2PMYiLWNVfsipBM8" target="_blank" rel="noopener noreferrer" class="store-box store-box--physical">
-                    <div class="store-box-header">
-                        <div class="store-brand store-brand--physical">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                                <path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-7h6v7M3 9h18"/>
-                            </svg>
+                    <!-- Card Shopee -->
+                    <a href="https://shopee.com.br/villagelustres" target="_blank" rel="noopener noreferrer" class="store-box">
+                        <div class="store-box-header">
+                            <div class="store-brand">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Shopee.svg" alt="Shopee" width="119" height="38">
+                            </div>
+                            <span class="store-badge">Confira ofertas</span>
                         </div>
-                        <span class="store-badge">Visite-nos</span>
-                    </div>
-                    <div class="store-text">
-                        <h3>Loja Física</h3>
-                        <p>Veja de perto nossos lustres e pendentes, receba atendimento especializado e escolha sua peça presencialmente.</p>
-                        <div class="store-map" aria-hidden="true">
-                            <iframe src="https://www.google.com/maps?q=Atacad%C3%A3o+das+L%C3%A2mpadas+-+Village+Lustres%2C+S%C3%A3o+Jos%C3%A9+do+Rio+Preto+-+SP&ll=-20.8128868,-49.3797466&z=18&output=embed" loading="lazy" title="Mapa do Atacadão das Lâmpadas - Village Lustres"></iframe>
+                        <div class="store-text">
+                            <h3>Shopee</h3>
+                            <p>Confira na Shopee os cupons disponíveis e as condições de frete para o seu CEP. Benefícios variam conforme o anúncio e a campanha.</p>
                         </div>
-                    </div>
-                    <div class="store-footer">
-                        <span class="store-link">Ver localização</span>
-                        <span class="store-arrow">→</span>
-                    </div>
-                </a>
-
-            </div>
-
-            <div class="trust-bar">
-                <div class="trust-item"><div class="icon-line"></div><p>Envio Imediato</p></div>
-                <div class="trust-item"><div class="icon-line"></div><p>Reputação Máxima</p></div>
-                <div class="trust-item"><div class="icon-line"></div><p>Garantia de Fábrica</p></div>
-            </div>
-        </section>
-    </div>
-
-    <!-- ===== CONTATO ===== -->
-    <section id="contato">
-        <p class="subtitle">FALE CONOSCO</p>
-        <h2 class="contato-title">Contato <span>&</span> Atendimento</h2>
-
-        <div class="contato-cards contato-cards--single">
-
-            <div class="contato-card contato-card--info">
-                <div class="contato-card-inner">
-                    <div class="contato-col contato-col--horario">
-                        <div class="contato-icon contato-icon--info">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                                <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
-                            </svg>
+                        <div class="store-footer">
+                            <span class="store-link">Acessar loja oficial</span>
+                            <span class="store-arrow">→</span>
                         </div>
-                        <h3>Horário de Atendimento</h3>
-                        <p>Atendimento via WhatsApp para dúvidas:</p>
-                        <ul class="contato-features">
-                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Seg – Sex: 08h às 18h</li>
-                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Sábado: 08h às 13h</li>
-                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>Dom e feriados: Fechado</li>
-                        </ul>
-                        <a href="https://wa.me/5517982008671" target="_blank" rel="noopener noreferrer" class="contato-link contato-link--wp">
-                            Chamar no WhatsApp
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </a>
+
+                    <!-- Card Loja Física -->
+                    <article class="store-box store-box--physical">
+                        <div class="store-box-header">
+                            <div class="store-brand store-brand--physical">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                                    <path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-7h6v7M3 9h18"/>
+                                </svg>
+                            </div>
+                            <span class="store-badge">Visite-nos</span>
+                        </div>
+                        <div class="store-text">
+                            <h3>Loja Física</h3>
+                            <p>Veja de perto nossos lustres e pendentes, receba atendimento especializado e escolha sua peça presencialmente.</p>
+                            <div class="store-map">
+                                <iframe referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Atacad%C3%A3o+das+L%C3%A2mpadas+-+Village+Lustres%2C+S%C3%A3o+Jos%C3%A9+do+Rio+Preto+-+SP&ll=-20.8128868,-49.3797466&z=18&output=embed" loading="lazy" title="Mapa do Atacadão das Lâmpadas - Village Lustres"></iframe>
+                            </div>
+                        </div>
+                        <a class="store-footer" href="https://maps.app.goo.gl/S2PMYiLWNVfsipBM8" target="_blank" rel="noopener noreferrer" aria-label="Ver localização da loja no Google Maps">
+                            <span class="store-link">Ver localização</span>
+                            <span class="store-arrow">→</span>
                         </a>
+                    </article>
+
+                </div>
+
+                <div class="trust-bar">
+                    <div class="trust-item"><div class="icon-line"></div><p>Envio Imediato</p></div>
+                    <div class="trust-item"><div class="icon-line"></div><p>Reputação Máxima</p></div>
+                    <div class="trust-item"><div class="icon-line"></div><p>Garantia de Fábrica</p></div>
+                </div>
+            </section>
+
+            <section id="sobre" tabindex="-1">
+                <div class="container-sobre">
+                    <p class="subtitle">QUEM SOMOS</p>
+                    <h2>Sobre a <span>Village</span></h2>
+                    <p class="sobre-description">
+                        "Especialistas em iluminação de alto padrão há mais de 10 anos, transformamos residências e empresas em espaços sofisticados e funcionais. Na Village, cada produto é cuidadosamente selecionado para valorizar a arquitetura, criar ambientes únicos e proporcionar o equilíbrio perfeito entre estética premium e funcionalidade. Somos referência em qualidade, design e satisfação do cliente."
+                    </p>
+                    <div class="divider">
+                        <div class="divider-line"></div>
+                        <span class="star-icon">✦</span>
+                        <div class="divider-line"></div>
+                    </div>
+                    <div class="metrics-bar">
+                    <div class="metric-item">
+                        <span class="metric-number">+5 mil</span>
+                        <span class="metric-text">Vendas</span>
                     </div>
 
-                    <div class="contato-col contato-col--local">
-                        <div class="contato-icon contato-icon--info">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                                <path d="M12 21s6-5.686 6-11a6 6 0 10-12 0c0 5.314 6 11 6 11z"/>
-                                <circle cx="12" cy="10" r="2.5"/>
-                            </svg>
-                        </div>
-                        <h3>Atendimento Presencial</h3>
-                        <p>Visite nossa loja e conheça nossos modelos em destaque.</p>
-                        <ul class="contato-features contato-features--address">
-                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s6-5.686 6-11a6 6 0 10-12 0c0 5.314 6 11 6 11z"/><circle cx="12" cy="10" r="2.5"/></svg>R. XV de Novembro, 3045 - Centro</li>
-                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s6-5.686 6-11a6 6 0 10-12 0c0 5.314 6 11 6 11z"/><circle cx="12" cy="10" r="2.5"/></svg>São José do Rio Preto - SP, 15015-110</li>
-                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Seg – Sex: 08h às 18h</li>
-                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Sábado: 08h às 13h</li>
-                        </ul>
-                        <a href="https://maps.app.goo.gl/S2PMYiLWNVfsipBM8" target="_blank" rel="noopener noreferrer" class="contato-link">
-                            Como chegar
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                        </a>
+                    <div class="metric-item">
+                        <span class="metric-number">+300 produtos</span>
+                        <span class="metric-text">Nas lojas online</span>
                     </div>
-                    <div class="contato-divider-v"></div>
-                    <div class="contato-col contato-col--24h">
-                        <div class="badge-24h">
-                            <span class="badge-24h__number">24h</span>
-                            <span class="badge-24h__label">por dia,<br>7 dias<br>por semana</span>
+
+                    <div class="metric-item">
+                        <span class="metric-number">Líder Gold</span>
+                        <span class="metric-text">Vendedor Destaque</span>
+                    </div>
+
+                    <div class="metric-item">
+                        <span class="metric-number">100%</span>
+                        <span class="metric-text">Entrega Segura</span>
+                    </div>
+                </div>
+                    <div class="cards-grid">
+                        <div class="card-pilar">
+                            <div class="icon-wrapper">
+                                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+                                    <circle cx="12" cy="12" r="4"/>
+                                </svg>
+                            </div>
+                            <h3>Iluminação de Qualidade</h3>
+                            <p>Curadoria rigorosa de marcas que unem eficiência energética e design atemporal.</p>
                         </div>
-                        <p class="col-24h-text">Compre a qualquer hora nas nossas lojas oficiais. Sempre disponível, sempre seguro.</p>
-                        <div class="lojas-24h-links">
-                            <a href="https://www.mercadolivre.com.br/pagina/villageshopping?category_id=MLB189195&item_id=MLB3952702131&recos_listing=true&client=recoview-selleritems&seller_id=206375372#origin=vpp" target="_blank" rel="noopener noreferrer" class="loja-24h-btn">
-                                <img src="https://http2.mlstatic.com/frontend-assets/ui-navigation/5.18.9/mercadolibre/logo__small.png" alt="Mercado Livre">
-                                <span>Mercado Livre →</span>
-                            </a>
-                            <a href="https://shopee.com.br/villagelustres" target="_blank" rel="noopener noreferrer" class="loja-24h-btn">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Shopee.svg" alt="Shopee">
-                                <span>Shopee →</span>
-                            </a>
+                        <div class="card-pilar">
+                            <div class="icon-wrapper">
+                                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M3 3h18v18H3zM3 9h18M3 15h18M9 3v18M15 3v18"/>
+                                </svg>
+                            </div>
+                            <h3>Soluções Completas</h3>
+                            <p>Do lustre central aos detalhes de spots e arandelas para todos os seus projetos.</p>
+                        </div>
+                        <div class="card-pilar">
+                            <div class="icon-wrapper">
+                                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                </svg>
+                            </div>
+                            <h3>Qualidade Garantida</h3>
+                            <p>Procedência garantida em cada peça, com foco na durabilidade e acabamento premium.</p>
+                        </div>
+                        <div class="card-pilar">
+                            <div class="icon-wrapper">
+                                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                                <line x1="3" y1="6" x2="21" y2="6"></line>
+                                <path d="M16 10a4 4 0 0 1-8 0"></path>
+                            </svg>
+                            </div>
+                            <h3>Compra Simplificada</h3>
+                            <p>Feita através das maiores plataformas do país, garantindo proteção total e facilidade em cada etapa.</p>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
 
-        <!-- FAQ ACCORDION -->
-        <div class="faq-wrapper">
-            <h3 class="faq-title">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-                Perguntas Frequentes
-            </h3>
-            <div class="faq-accordion">
-                <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-question"><h4>Como faço para comprar?</h4><span class="faq-icon">+</span></div>
-                    <div class="faq-answer"><p>Todas as nossas vendas são realizadas pelo Mercado Livre e Shopee. Basta clicar em "Comprar no Mercado Livre" ou "Comprar no Shopee" no produto desejado. Você tem todo o suporte e proteção da plataforma.</p></div>
-                </div>
-                <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-question"><h4>Posso tirar dúvidas antes de comprar?</h4><span class="faq-icon">+</span></div>
-                    <div class="faq-answer"><p>Sim! Estamos disponíveis pelo WhatsApp para orientar você na escolha do produto ideal para o seu ambiente. Clique no botão verde ao lado.</p></div>
-                </div>
-                <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-question"><h4>Qual o prazo de entrega?</h4><span class="faq-icon">+</span></div>
-                    <div class="faq-answer"><p>O prazo varia de acordo com sua localização e a modalidade de frete escolhida no Mercado Livre e Shopee. Trabalhamos com envio rápido e todos os pedidos têm rastreamento.</p></div>
-                </div>
-                <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-question"><h4>Os produtos têm garantia?</h4><span class="faq-icon">+</span></div>
-                    <div class="faq-answer"><p>Sim! Todos os produtos possuem garantia do fabricante e você conta com a proteção ao comprador do Mercado Livre e Shopee em caso de qualquer problema.</p></div>
-                </div>
-                <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-question"><h4>Vocês fazem atacado?</h4><span class="faq-icon">+</span></div>
-                    <div class="faq-answer"><p>Sim! Atendemos tanto varejo quanto atacado. Para pedidos em grande quantidade, entre em contato pelo WhatsApp para condições especiais.</p></div>
-                </div>
-                <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-question"><h4>Como funciona a troca ou devolução?</h4><span class="faq-icon">+</span></div>
-                    <div class="faq-answer"><p>Trocas e devoluções seguem a política do Mercado Livre e Shopee , que garante prazo de 7 dias após o recebimento. Também estamos disponíveis pelo WhatsApp para resolver qualquer situação.</p></div>
+        <!-- ===== CONTATO ===== -->
+        <section id="contato" tabindex="-1">
+            <p class="subtitle">FALE CONOSCO</p>
+            <h2 class="contato-title">Contato <span>&</span> Atendimento</h2>
+
+            <div class="contato-cards contato-cards--single">
+
+                <div class="contato-card contato-card--info">
+                    <div class="contato-card-inner">
+                        <div class="contato-col contato-col--horario">
+                            <div class="contato-icon contato-icon--info">
+                                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                    <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+                                </svg>
+                            </div>
+                            <h3>Horário de Atendimento</h3>
+                            <p>Atendimento via WhatsApp para dúvidas:</p>
+                            <ul class="contato-features">
+                                <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Seg – Sex: 08h às 18h</li>
+                                <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Sábado: 08h às 13h</li>
+                                <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>Dom e feriados: Fechado</li>
+                            </ul>
+                            <a href="https://wa.me/5517982008671" target="_blank" rel="noopener noreferrer" class="contato-link contato-link--wp">
+                                Chamar no WhatsApp
+                                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            </a>
+                        </div>
+
+                        <div class="contato-col contato-col--local">
+                            <div class="contato-icon contato-icon--info">
+                                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                    <path d="M12 21s6-5.686 6-11a6 6 0 10-12 0c0 5.314 6 11 6 11z"/>
+                                    <circle cx="12" cy="10" r="2.5"/>
+                                </svg>
+                            </div>
+                            <h3>Atendimento Presencial</h3>
+                            <p>Visite nossa loja e conheça nossos modelos em destaque.</p>
+                            <ul class="contato-features contato-features--address">
+                                <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s6-5.686 6-11a6 6 0 10-12 0c0 5.314 6 11 6 11z"/><circle cx="12" cy="10" r="2.5"/></svg>R. XV de Novembro, 3045 - Centro</li>
+                                <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s6-5.686 6-11a6 6 0 10-12 0c0 5.314 6 11 6 11z"/><circle cx="12" cy="10" r="2.5"/></svg>São José do Rio Preto - SP, 15015-110</li>
+                                <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Seg – Sex: 08h às 18h</li>
+                                <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Sábado: 08h às 13h</li>
+                            </ul>
+                            <a href="https://maps.app.goo.gl/S2PMYiLWNVfsipBM8" target="_blank" rel="noopener noreferrer" class="contato-link">
+                                Como chegar
+                                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            </a>
+                        </div>
+
+                        <div class="contato-col contato-col--24h">
+                            <div class="badge-24h">
+                                <span class="badge-24h__number">24h</span>
+                                <span class="badge-24h__label">por dia,<br>7 dias<br>por semana</span>
+                            </div>
+                            <p class="col-24h-text">Compre a qualquer hora nas nossas lojas oficiais. Sempre disponível, sempre seguro.</p>
+                            <div class="lojas-24h-links">
+                                <a href="https://www.mercadolivre.com.br/pagina/villageshopping?category_id=MLB189195&item_id=MLB3952702131&recos_listing=true&client=recoview-selleritems&seller_id=206375372#origin=vpp" target="_blank" rel="noopener noreferrer" class="loja-24h-btn">
+                                    <img src="https://http2.mlstatic.com/frontend-assets/ui-navigation/5.18.9/mercadolibre/logo__small.png" alt="Mercado Livre" width="28" height="20">
+                                    <span>Mercado Livre →</span>
+                                </a>
+                                <a href="https://shopee.com.br/villagelustres" target="_blank" rel="noopener noreferrer" class="loja-24h-btn">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Shopee.svg" alt="Shopee" width="63" height="20">
+                                    <span>Shopee →</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+
+            <!-- FAQ nativo: teclado e leitores de tela, sem dependência de JavaScript. -->
+            <div class="faq-wrapper">
+                <h3 class="faq-title">
+                    <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                    Perguntas Frequentes
+                </h3>
+                <div class="faq-accordion">
+                    <details class="faq-item" name="perguntas-frequentes">
+                        <summary class="faq-question"><span>Como faço para comprar?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+                        <div class="faq-answer"><p>Você pode comprar pelo Mercado Livre, pela Shopee ou visitar nossa loja física. Na vitrine, clique em "Ver produto" para consultar as condições e finalizar a compra na plataforma indicada.</p></div>
+                    </details>
+                    <details class="faq-item" name="perguntas-frequentes">
+                        <summary class="faq-question"><span>Posso tirar dúvidas antes de comprar?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+                        <div class="faq-answer"><p>Sim! Estamos disponíveis pelo WhatsApp para orientar você na escolha do produto ideal para o seu ambiente. Use o link "Chamar no WhatsApp" na seção de atendimento.</p></div>
+                    </details>
+                    <details class="faq-item" name="perguntas-frequentes">
+                        <summary class="faq-question"><span>Qual o prazo de entrega?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+                        <div class="faq-answer"><p>O prazo varia de acordo com sua localização e a modalidade de frete escolhida no Mercado Livre e Shopee. Trabalhamos com envio rápido e todos os pedidos têm rastreamento.</p></div>
+                    </details>
+                    <details class="faq-item" name="perguntas-frequentes">
+                        <summary class="faq-question"><span>Os produtos têm garantia?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+                        <div class="faq-answer"><p>Sim! Todos os produtos possuem garantia do fabricante e você conta com a proteção ao comprador do Mercado Livre e Shopee em caso de qualquer problema.</p></div>
+                    </details>
+                    <details class="faq-item" name="perguntas-frequentes">
+                        <summary class="faq-question"><span>Vocês fazem atacado?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+                        <div class="faq-answer"><p>Sim! Atendemos tanto varejo quanto atacado. Para pedidos em grande quantidade, entre em contato pelo WhatsApp para condições especiais.</p></div>
+                    </details>
+                    <details class="faq-item" name="perguntas-frequentes">
+                        <summary class="faq-question"><span>Como funciona a troca ou devolução?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+                        <div class="faq-answer"><p>Para compras online, consulte as condições de troca e devolução no pedido da plataforma utilizada. Para compras presenciais ou dúvidas, entre em contato pelo WhatsApp.</p></div>
+                    </details>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- ===== FOOTER ===== -->
     <footer>
         <div class="footer-content">
             <div class="footer-brand">
-                <img src="logotipo.png" alt="Village Lustres" class="footer-logo">
+                <img src="logotipo.png" alt="Village Lustres" width="640" height="263" class="footer-logo">
                 <p>Iluminação de alto padrão para ambientes residenciais e comerciais. Vendas com segurança pelo Mercado Livre e Shopee.</p>
             </div>
             <div class="footer-links">
-                <h5>Navegação</h5>
+                <h2>Navegação</h2>
                 <a href="#home">Home</a>
-                <a href="#sobre">Sobre</a>
+                <a href="#produtos">Produtos</a>
                 <a href="#lojas">Comprar</a>
+                <a href="#sobre">Sobre</a>
                 <a href="#contato">Contato</a>
             </div>
             <div class="footer-links">
-                <h5>Nossas Lojas</h5>
+                <h2>Nossas Lojas</h2>
                 <a href="https://www.mercadolivre.com.br/pagina/villageshopping?category_id=MLB189195&item_id=MLB3952702131&recos_listing=true&client=recoview-selleritems&seller_id=206375372#origin=vpp" target="_blank" rel="noopener noreferrer">Mercado Livre</a>
                 <a href="https://shopee.com.br/villagelustres" target="_blank" rel="noopener noreferrer">Shopee</a>
             </div>
             <div class="footer-links">
-                <h5>Redes Sociais</h5>
+                <h2>Redes Sociais</h2>
                 <a href="https://www.instagram.com/villagelustres" target="_blank" rel="noopener noreferrer">Instagram</a>
                 <a href="https://www.facebook.com/villagelustres" target="_blank" rel="noopener noreferrer">Facebook</a>
                 <a href="https://wa.me/5517982008671" target="_blank" rel="noopener noreferrer">WhatsApp</a>
