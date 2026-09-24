@@ -31,6 +31,7 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #050505;
     color: #fff;
+    overflow-wrap: anywhere;
 }
 
 /* ===================== HEADER ===================== */
@@ -101,6 +102,7 @@ nav a:hover::after { width: 100%; }
 #home {
     position: relative;
     min-height: 100vh;
+    min-height: 100svh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -148,6 +150,7 @@ nav a:hover::after { width: 100%; }
     align-items: center;
     text-align: center;
     max-width: 900px;
+    width: 100%;
     margin: 0 auto;
     padding: 0 20px;
     letter-spacing: 1px;
@@ -260,7 +263,7 @@ h2 span { color: #cc8d3b; }
 
 .cards-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 24px;
     margin-top: 24px;
     align-items: stretch;
@@ -641,10 +644,13 @@ h2 span { color: #cc8d3b; }
 
 /* Card único de contato. */
 .contato-cards--single {
+    width: 100%;
     max-width: 980px;
     margin: 0 auto 60px;
 }
 .contato-cards--single .contato-card {
+    width: 100%;
+    min-width: 0;
     max-width: 100%;
     padding: 0;
     overflow: hidden;
@@ -700,6 +706,8 @@ h2 span { color: #cc8d3b; }
 /* Badge 24h */
 .badge-24h {
     display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
     align-items: center;
     gap: 12px;
     margin-bottom: 18px;
@@ -886,6 +894,14 @@ body.menu-open { overflow: hidden; }
 #produtos h2 { font-size: clamp(2rem, 3vw, 2.7rem); line-height: 1.12; margin-bottom: 10px; }
 #produtos .lojas-description { font-size: 0.85rem; line-height: 1.5; margin-top: 10px; }
 
+/* Evita comprimir as três colunas de atendimento em notebooks menores. */
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .contato-card-inner { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .contato-col--local { border-right: none; }
+    .contato-col--24h { grid-column: 1 / -1; border-left: none; border-top: 1px solid rgba(212,175,55,0.12); }
+    .contato-col--24h .lojas-24h-links { max-width: 360px; }
+}
+
 /* Duas colunas de métricas e uma coluna de lojas em tablets. */
 @media (max-width: 1024px) {
     .metrics-bar { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; margin: 40px auto; padding: 0; border: 1px solid rgba(204,141,59,0.2); border-radius: 12px; overflow: hidden; }
@@ -990,7 +1006,7 @@ body.menu-open { overflow: hidden; }
         visibility: hidden;
         overflow: hidden;
     }
-    header.menu-ready #nav-menu.active { height: calc(100dvh - var(--header-height)); overflow-y: auto; visibility: visible; }
+    header.menu-ready #nav-menu.active { height: calc(100vh - var(--header-height)); height: calc(100dvh - var(--header-height)); overflow-y: auto; visibility: visible; }
     #nav-menu a {
         padding: 1.5rem;
         margin: 0 2rem;
@@ -1027,7 +1043,7 @@ body.menu-open { overflow: hidden; }
 
     /* Sobre — cards menores e mais compactos em 2 colunas */
     .cards-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 10px;
         padding: 0;
     }
@@ -1116,7 +1132,7 @@ body.menu-open { overflow: hidden; }
     .sobre-description { margin: 18px auto 26px; }
 
     /* Em telas muito pequenas, manter 2 colunas mais compactas para os cards "Sobre" */
-    .cards-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; padding: 0; }
+    .cards-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; padding: 0; }
     .card-pilar { padding: 14px 12px; text-align: center; align-items: center; }
     .card-pilar h3 { font-size: 0.76rem; }
     .card-pilar p { font-size: 0.7rem; line-height: 1.45; }
