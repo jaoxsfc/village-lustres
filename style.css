@@ -309,11 +309,11 @@ h2 span { color: #cc8d3b; }
 
 /* Nova Barra de Métricas */
 .metrics-bar {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
     align-items: center;
     width: 100%;
-    max-width: 1000px;
     margin: 24px auto 18px;
     padding-bottom: 8px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
@@ -888,7 +888,19 @@ body.menu-open { overflow: hidden; }
 .faq-question > span:first-child { min-width: 0; }
 .faq-answer a { color: var(--gold); }
 .metric-item { min-width: 0; }
-.metric-item + .metric-item { border-left: 1px solid rgba(204,141,59,0.2); padding-left: 16px; }
+/* Divisórias no espaço entre as colunas, sem deslocar os textos. */
+@media (min-width: 1025px) {
+    .metric-item { position: relative; text-align: center; }
+    .metric-item + .metric-item::before {
+        content: "";
+        position: absolute;
+        left: -12px;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background: rgba(204,141,59,0.2);
+    }
+}
 .store-link { overflow-wrap: anywhere; }
 #produtos { border-top: 0; padding-top: 30px; padding-bottom: 34px; }
 #produtos h2 { font-size: clamp(2rem, 3vw, 2.7rem); line-height: 1.12; margin-bottom: 10px; }
