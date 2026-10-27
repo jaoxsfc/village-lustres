@@ -78,6 +78,7 @@
 
     // A navegação manual tem prioridade sobre a rolagem automática.
     const manualMovements = new Map();
+    const automaticPositions = new Map();
     document.querySelectorAll('[data-carousel-prev], [data-carousel-next]').forEach(button => {
         button.hidden = false;
         button.addEventListener('click', () => {
@@ -87,6 +88,7 @@
             const previousMovement = manualMovements.get(carousel);
             if (previousMovement) cancelAnimationFrame(previousMovement.frame);
             manualMovements.delete(carousel);
+            automaticPositions.delete(carousel);
 
             if (reducedMotion.matches) {
                 carousel.scrollBy({ left: direction * distance, behavior: 'instant' });
@@ -114,6 +116,7 @@
                     const currentLoopPoint = Number(carousel.dataset.loopPoint);
                     if (currentLoopPoint > 0) carousel.scrollLeft %= currentLoopPoint;
                     manualMovements.delete(carousel);
+                    automaticPositions.delete(carousel);
                 }
             };
             movement.frame = requestAnimationFrame(move);
@@ -126,6 +129,7 @@
         const focusedCarousels = new Set();
         carousels.forEach(carousel => {
             const originalCards = [...carousel.children];
+            if (!originalCards.length) return;
             originalCards.forEach(card => {
                 const copy = card.cloneNode(true);
                 copy.setAttribute('aria-hidden', 'true');
@@ -145,11 +149,18 @@
         const animateCarousels = time => {
             const elapsed = previousTime ? Math.min(time - previousTime, 64) : 0;
             previousTime = time;
-            if (hoveredCarousels.size === 0 && focusedCarousels.size === 0 && manualMovements.size === 0) {
+            if (!document.hidden) {
                 carousels.forEach(carousel => {
+                    if (hoveredCarousels.has(carousel) || focusedCarousels.has(carousel) || manualMovements.has(carousel)) {
+                        automaticPositions.delete(carousel);
+                        return;
+                    }
                     const loopPoint = Number(carousel.dataset.loopPoint);
-                    carousel.scrollLeft += speed * elapsed / 1000;
-                    if (loopPoint > 0 && carousel.scrollLeft >= loopPoint) carousel.scrollLeft -= loopPoint;
+                    if (!(loopPoint > 0)) return;
+                    // Acumula frações fora do DOM: scrollLeft pode arredondar pixels.
+                    const position = ((automaticPositions.get(carousel) ?? carousel.scrollLeft) + speed * elapsed / 1000) % loopPoint;
+                    automaticPositions.set(carousel, position);
+                    carousel.scrollLeft = position;
                 });
             }
             window.requestAnimationFrame(animateCarousels);
@@ -165,6 +176,12 @@
             wrapper.addEventListener('focusout', event => {
                 if (!wrapper.contains(event.relatedTarget)) focusedCarousels.delete(carousel);
             });
+            carousel.addEventListener('pointerdown', () => hoveredCarousels.add(carousel));
+            window.addEventListener('pointerup', event => {
+                if (event.pointerType !== 'mouse' || !wrapper.matches(':hover')) hoveredCarousels.delete(carousel);
+            });
+            window.addEventListener('pointercancel', () => hoveredCarousels.delete(carousel));
+            carousel.addEventListener('wheel', () => automaticPositions.delete(carousel), { passive: true });
         });
     }
 })();

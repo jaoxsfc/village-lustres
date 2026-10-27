@@ -1196,3 +1196,11 @@ body.menu-open { overflow: hidden; }
     html { scroll-behavior: auto; }
     *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
+
+/* Slots reservados com a mesma altura das imagens dos produtos. */
+.product-slot-image {
+    display: grid;
+    place-items: center;
+    color: #cc8d3b;
+    font-size: 2rem;
+}
