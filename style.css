@@ -355,9 +355,12 @@ h2 span { color: #cc8d3b; }
 .product-shelf-heading { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin-bottom: 10px; }
 .shelf-kicker { color: #cc8d3b; font-size: 0.52rem; letter-spacing: 2.6px; text-transform: uppercase; margin-bottom: 4px; }
 .product-shelf-heading h3 { color: #fff; font: 500 1.25rem 'Playfair Display', serif; }
-.more-products-link { color: #cc8d3b; font-size: 0.67rem; letter-spacing: 1.7px; text-decoration: none; text-transform: uppercase; white-space: nowrap; }
-.more-products-link span { display: inline-block; font-size: 1rem; margin-left: 6px; transition: transform 0.3s; }
-.more-products-link:hover span { transform: translateX(4px); }
+.product-store-links { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 16px 28px; margin-top: 32px; text-align: center; }
+.product-store-link { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 12px 18px; border: 1px solid rgba(204,141,59,0.45); color: #cc8d3b; font-size: 0.67rem; letter-spacing: 1.7px; text-decoration: none; text-transform: uppercase; transition: background 0.3s, color 0.3s; }
+.product-store-link span { display: inline-block; font-size: 1rem; transition: transform 0.3s; }
+.product-store-link:hover { background: #cc8d3b; color: #050505; }
+.product-store-link:hover span { transform: translateX(4px); }
+.product-store-link:focus-visible { outline: 2px solid #cc8d3b; outline-offset: 4px; }
 
 .products-carousel-wrap { position: relative; }
 .products-carousel { display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 48px) / 4); gap: 16px; overflow-x: auto; scrollbar-width: none; scroll-behavior: smooth; }
