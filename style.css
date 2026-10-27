@@ -365,6 +365,7 @@ h2 span { color: #cc8d3b; }
 .products-carousel-wrap { position: relative; }
 .products-carousel { display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 48px) / 4); gap: 16px; overflow-x: auto; scrollbar-width: none; scroll-behavior: smooth; }
 .products-carousel::-webkit-scrollbar { display: none; }
+.products-carousel { -webkit-overflow-scrolling: touch; }
 .product-card { position: relative; min-width: 0; border: 1px solid rgba(255,255,255,0.08); background: #0d0d0d; color: #fff; text-decoration: none; transition: border-color 0.3s, transform 0.3s; }
 .product-card:hover { border-color: rgba(204,141,59,0.6); transform: translateY(-4px); }
 .product-card-badge { position: absolute; top: 8px; left: 8px; z-index: 1; padding: 5px 7px; background: #cc8d3b; color: #080808; font-size: 0.46rem; font-weight: 500; letter-spacing: 1px; line-height: 1; text-transform: uppercase; }
