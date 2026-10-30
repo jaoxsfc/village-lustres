@@ -363,7 +363,7 @@ h2 span { color: #cc8d3b; }
 .product-store-link:focus-visible { outline: 2px solid #cc8d3b; outline-offset: 4px; }
 
 .products-carousel-wrap { position: relative; }
-.products-carousel { display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 48px) / 4); gap: 16px; overflow-x: auto; scrollbar-width: none; scroll-behavior: smooth; }
+.products-carousel { display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 48px) / 4); gap: 16px; overflow-x: auto; scrollbar-width: none; scroll-behavior: smooth; touch-action: pan-x pan-y pinch-zoom; overscroll-behavior-inline: contain; }
 .products-carousel::-webkit-scrollbar { display: none; }
 .products-carousel { -webkit-overflow-scrolling: touch; }
 .product-card { position: relative; min-width: 0; border: 1px solid rgba(255,255,255,0.08); background: #0d0d0d; color: #fff; text-decoration: none; transition: border-color 0.3s, transform 0.3s; }

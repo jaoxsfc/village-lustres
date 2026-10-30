@@ -125,8 +125,12 @@
 
     if (!reducedMotion.matches) {
         const carousels = [...document.querySelectorAll('[data-carousel]')];
+        const canAutoPlay = window.matchMedia('(hover: hover) and (pointer: fine)');
         const hoveredCarousels = new Set();
         const focusedCarousels = new Set();
+        const interactingCarousels = new Set();
+        const visibleCarousels = new Set(carousels);
+        const resumeTimes = new Map();
         carousels.forEach(carousel => {
             const originalCards = [...carousel.children];
             if (!originalCards.length) return;
@@ -144,14 +148,24 @@
             carousel.style.scrollBehavior = 'auto';
         });
 
+        if ('IntersectionObserver' in window) {
+            const carouselObserver = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) visibleCarousels.add(entry.target);
+                    else visibleCarousels.delete(entry.target);
+                });
+            }, { rootMargin: '100px 0px' });
+            carousels.forEach(carousel => carouselObserver.observe(carousel));
+        }
+
         let previousTime = 0;
-        const speed = 38;
+        const speed = 48;
         const animateCarousels = time => {
-            const elapsed = previousTime ? Math.min(time - previousTime, 64) : 0;
+            const elapsed = previousTime ? Math.min(time - previousTime, 34) : 0;
             previousTime = time;
-            if (!document.hidden) {
+            if (!document.hidden && canAutoPlay.matches) {
                 carousels.forEach(carousel => {
-                    if (hoveredCarousels.has(carousel) || focusedCarousels.has(carousel) || manualMovements.has(carousel)) {
+                    if (!visibleCarousels.has(carousel) || hoveredCarousels.has(carousel) || focusedCarousels.has(carousel) || manualMovements.has(carousel) || interactingCarousels.has(carousel) || time < (resumeTimes.get(carousel) ?? 0)) {
                         automaticPositions.delete(carousel);
                         return;
                     }
@@ -165,11 +179,37 @@
             }
             window.requestAnimationFrame(animateCarousels);
         };
-        window.requestAnimationFrame(animateCarousels);
+        if (canAutoPlay.matches) window.requestAnimationFrame(animateCarousels);
 
         carousels.forEach(carousel => {
             // Inclui as setas, que ficam fora da área rolável.
             const wrapper = carousel.closest('.products-carousel-wrap');
+            const pauseForGesture = () => {
+                resumeTimes.set(carousel, performance.now() + 1600);
+                automaticPositions.delete(carousel);
+            };
+            carousel.addEventListener('touchstart', () => {
+                interactingCarousels.add(carousel);
+                const movement = manualMovements.get(carousel);
+                if (movement) {
+                    cancelAnimationFrame(movement.frame);
+                    manualMovements.delete(carousel);
+                }
+                pauseForGesture();
+            }, { passive: true });
+            const finishTouch = event => {
+                if (event.touches.length) return;
+                interactingCarousels.delete(carousel);
+                pauseForGesture();
+            };
+            carousel.addEventListener('touchend', finishTouch, { passive: true });
+            carousel.addEventListener('touchcancel', finishTouch, { passive: true });
+            carousel.addEventListener('scroll', () => {
+                // Mantém a pausa enquanto o navegador conclui a inércia do gesto.
+                if (interactingCarousels.has(carousel) || performance.now() < (resumeTimes.get(carousel) ?? 0)) {
+                    pauseForGesture();
+                }
+            }, { passive: true });
             wrapper.addEventListener('pointerenter', () => hoveredCarousels.add(carousel));
             wrapper.addEventListener('pointerleave', () => hoveredCarousels.delete(carousel));
             wrapper.addEventListener('focusin', () => focusedCarousels.add(carousel));
@@ -181,7 +221,7 @@
                 if (event.pointerType !== 'mouse' || !wrapper.matches(':hover')) hoveredCarousels.delete(carousel);
             });
             window.addEventListener('pointercancel', () => hoveredCarousels.delete(carousel));
-            carousel.addEventListener('wheel', () => automaticPositions.delete(carousel), { passive: true });
+            carousel.addEventListener('wheel', pauseForGesture, { passive: true });
         });
     }
 })();
